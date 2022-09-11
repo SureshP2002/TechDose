@@ -1,4 +1,4 @@
-package BeginnersAssignment;
+package BEGINNERSASSIGNMENT;
 import java.util.*;
 
 public class lcmANDgcd {

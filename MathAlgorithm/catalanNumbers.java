@@ -1,4 +1,4 @@
-package day4NumberTheory;
+package MathAlgorithm;
 import java.util.*;
 
 public class catalanNumbers {
@@ -6,11 +6,14 @@ public class catalanNumbers {
     {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
+
         //dynamic programming approach;
         //TC: O(N^2);
-        long arr[]=new long[n+2];//creating an array for storing catalan values
-        arr[0]=1;//initializing first index element ot 1;
-        arr[1]=1;//initializing second index element to 1;
+
+        long arr[]=new long[n+2];   //creating an array for storing catalan values
+
+        arr[0]=1;        //initializing first index element ot 1;
+        arr[1]=1;      //initializing second index element to 1;
         //as we know catalan series is  - 1,1,2,5,14,42,132.......
         for(int i=2;i<n+1;i++)//traversing from index 2;
         {

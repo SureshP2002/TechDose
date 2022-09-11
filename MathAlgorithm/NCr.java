@@ -1,4 +1,4 @@
-package day4NumberTheory;
+package MathAlgorithm;
 import java.util.*;
 
 public class NCr {

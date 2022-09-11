@@ -1,7 +1,7 @@
-package day4NumberTheory;
+package MathAlgorithm;
 import java.util.*;
 
-public class Gcd {
+public class GcdandLcm {
     int gcd(int a,int b)
     {
         return a%b==0?b:gcd(b,a%b);
@@ -10,7 +10,7 @@ public class Gcd {
         Scanner sc=new Scanner(System.in);
         int a=sc.nextInt();
         int b=sc.nextInt();
-        Gcd s=new Gcd();
+        GcdandLcm s=new GcdandLcm();
         int ans=s.gcd(a,b);
         System.out.println(ans);
         //toFindLCM

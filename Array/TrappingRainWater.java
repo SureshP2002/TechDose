@@ -1,6 +1,7 @@
 //leetcode-42;
 //TC-O(n)
 //Trapping Rain Water;
+//Two pointer technique
 
 class Solution {
     public int trap(int[] height) {

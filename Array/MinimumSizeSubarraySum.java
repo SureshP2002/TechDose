@@ -1,6 +1,6 @@
 //leetcode-209
 //TC-O(n)
-//minimum size subArray sum
+//minimum size subArray sum;
 
 class Solution {
     public int minSubArrayLen(int target, int[] nums) {

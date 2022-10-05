@@ -1,5 +1,5 @@
 //leetcode-4
-//TC-O(n);
+//TC-O(n1+n2);
 //approach-MergeSort
 
 

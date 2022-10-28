@@ -11,8 +11,8 @@ public class Heapsorttechnique {
     static void Heapify(int arr[],int n,int i)
     {
         int lar=i;
-       int L=2*i;
-       int R=2*i+1;
+       int L=2*i+1;
+       int R=2*i+2;
        if(L>=n||R>=n)return ;//if size exceeds return the arr
        if(L<n&&arr[L]>arr[lar])//finding large in left
        {

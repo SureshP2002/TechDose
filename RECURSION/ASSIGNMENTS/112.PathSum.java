@@ -23,7 +23,7 @@ class Solution {
         {
             return true;
         }
-         return hasPathSum(root.left,targetSum-root.val)||hasPathSum(root.right,targetSum-root.val);?//anyone one case is true means return true
+         return hasPathSum(root.left,targetSum-root.val)||hasPathSum(root.right,targetSum-root.val);//anyone one case is true means return true
       
     }
 }

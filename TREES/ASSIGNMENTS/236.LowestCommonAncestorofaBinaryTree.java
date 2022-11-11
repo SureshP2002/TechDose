@@ -19,7 +19,7 @@ class Solution {
         TreeNode left=lowestCommonAncestor(root.left,p,q);//left recursive call
         TreeNode right=lowestCommonAncestor(root.right,p,q);//right recursive call
         
-        if(left!=null&&right!=null)return root;//if both left and right is null then p and q is notfound
+        if(left!=null&&right!=null)return root;//if both left and right is notnull then p and q is notfound
        return left==null?right:left;//if left is null then return right else return left
         
     }

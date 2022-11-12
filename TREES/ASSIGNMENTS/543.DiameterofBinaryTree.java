@@ -28,7 +28,7 @@ class Solution {
         if(root==null)return 0;//if root is null return 0;
         int left=Count(root.left);//left call
         int right=Count(root.right);//right call
-        count=Math.max(count,left+right);//finding count value at every subtree
-        return 1+Math.max(left,right);//finally returning max of left and right +1;
+        count=Math.max(count,left+right);//finding count value at every subtree(height=left+right)
+        return 1+Math.max(left,right);//finally returning max (left ,right) +1;
     }
 }

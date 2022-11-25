@@ -3,11 +3,11 @@
 //SC-O(n)
 
 
-package inordertraversalmethod1;
+package Treetraversalmethod1;
 
 
 
-public class InorderTraversalMethod1 {
+public class TreeTraversalMethod1 {
      static class TreeNode{//definition
          int val;
          TreeNode left;

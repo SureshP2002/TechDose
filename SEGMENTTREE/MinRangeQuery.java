@@ -21,7 +21,7 @@ public class MinrangeQuery {
     }
     public static int minRange(int SI,int sl,int sr,int left,int right)
     {
-        if(right<sl||left>sr)return Integer.MAX_VALUE;
+        if(right<sl||left>sr)return Integer.MAX_VALUE;//returning Integer max when sr and sl is not at the range
         if(left<=sl&&sr<=right)return segmentArray[SI];
         int mid=sl+(sr-sl)/2;
         int leftMin=minRange(2*SI+1,sl,mid,left,right);

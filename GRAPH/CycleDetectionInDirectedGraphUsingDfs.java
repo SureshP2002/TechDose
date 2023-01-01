@@ -12,7 +12,7 @@ public class CycleDetectionInDIrectedGraph {
         visited[curr]=true;//making the curr visiting node to true
         for(int i=0;i<l.get(curr).size();i++)//traversing the curr node 
         {
-            if(visited[l.get(curr).get(i)]==false&&Dfs(visited,l,l.get(curr).get(i)))//Dfs call
+            if(Dfs(visited,l,l.get(curr).get(i)))//Dfs call
             {
                 return true;//if cycle found return true
             }

@@ -13,7 +13,7 @@ public class IsBipartiteGraphUsingDfs {
           {
               if(colors[l.get(curr).get(i)]==-1)//if adj node is -1 then it is not vsisted
               {
-                  if(check_bipar_Dfs(l,l.get(curr).get(i),1-colour))return false;//if adj has some same color
+                  if(!check_bipar_Dfs(l,l.get(curr).get(i),1-colour))return false;//if adj has some same color
               }
               else if(colors[l.get(curr).get(i)]==colour)//if adj nods have same clolour
               {

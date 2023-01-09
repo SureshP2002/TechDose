@@ -24,15 +24,15 @@ public class KruskalsAlgorithmUsingDsuf {
          if(dsuf[fromP].rank==dsuf[toP].rank)//if both ranj same
          {
              dsuf[fromP].parent=toP;//add (formp to toP) or (toP to fromp)
-             dsuf[fromP].rank+=1;//increase rank
+             dsuf[toP].rank+=1;//increase rank
          }
          else if(dsuf[fromP].rank<dsuf[toP].rank)//if from ran is low add to Top
          {
-             dsuf[fromP].rank=toP;
+             dsuf[fromP].parent=toP;
          }
          else if(dsuf[toP].rank<dsuf[fromP].rank)//if toP rank is low to fromP
          {
-             dsuf[toP].rank=fromP;
+             dsuf[toP].parent=fromP;
          }
      }
      public static void kruskals(int edges[][],int V,int E)

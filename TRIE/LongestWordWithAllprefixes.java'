@@ -1,0 +1,67 @@
+//tc-O(n^2)
+//approach-trie
+
+package longestwordwithallprefixes;
+
+public class LongestWordWithAllPrefixes {
+    static  TrieNode root;
+     class TrieNode{
+         TrieNode next[]=new TrieNode[26];
+         boolean wordend;
+     }
+   
+    public static void BuildTrie(String a)
+    {
+        TrieNode temp=root;
+        for(char ch:a.toCharArray())
+        {
+            int pos=ch-'a';
+            if(temp.next[pos]==null)
+            {
+                LongestWordWithAllPrefixes obj=new LongestWordWithAllPrefixes ();
+                temp.next[pos]=obj.new TrieNode();
+            }
+            temp=temp.next[pos];
+        }
+        temp.wordend=true;
+        
+    }
+    public static boolean CheckAllPrefixes(String a)
+    {
+        TrieNode temp=root;
+        for(char ch:a.toCharArray())
+        {
+            int pos=ch-'a';
+            if(temp.next[pos].wordend==false)
+            {
+                return false;
+            }
+            temp=temp.next[pos];
+        }
+        return true;
+    }
+
+    
+    public static void main(String[] args) {
+        String arr[]={"s","su","sur","nin","ninja","ninga"};
+        LongestWordWithAllPrefixes  obj=new LongestWordWithAllPrefixes ();
+         root=obj.new TrieNode();
+        for(int i=0;i<arr.length;i++)
+        {
+            BuildTrie(arr[i]);
+        }
+        String longest="";
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i].length()>longest.length())
+            {
+                if(CheckAllPrefixes(arr[i]))
+                {
+                    longest=arr[i];
+                }
+            }
+        }
+        System.out.print(longest);
+    }
+    
+}

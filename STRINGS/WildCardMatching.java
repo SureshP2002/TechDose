@@ -7,12 +7,12 @@ class Solution {
         boolean dp[][]=new boolean[n+1][m+1];
         //case:1 if both strings are empty means
         dp[0][0]=true;
-        //case:2 if pattern empty and text has charcter means
+        //case:2 if text empty and pattern has charcter means then we cannot match them
         for(int j=1;j<=m;j++)
         {
             dp[0][j]=false;
         }
-        //case:3 if text and pattern has char means(we need check if the remaining pat contains only the '*')
+        //case:3 if text not empty and pattern is empty(we need check if the remaining text contains only the '*')
         for(int i=1;i<=n;i++)
         {
             boolean flag=true;

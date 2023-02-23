@@ -17,7 +17,7 @@ class Solution {
         ListNode curr=head;//making curr to point to the head
         if(head==null)return null;//if head is null then there is no node;
         if(head.next==null)return head;//if head.next is null then theree is only one node;
-        while(curr.next!=null)//iterating untill curr.next is null
+        while(curr.next!=null)//iterating untill curr.next is not null
         {
             if(curr.val==curr.next.val)//both curr val and currs next value is same
             {

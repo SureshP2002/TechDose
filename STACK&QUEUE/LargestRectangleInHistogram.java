@@ -3,22 +3,39 @@
 
 class Solution {
     public int largestRectangleArea(int[] h) {
-        int n=h.length;//length of an array
-        int MaxArea=0;//finding maxArea
-        Stack<Integer> stack=new Stack<Integer>();//creating an stack;
-        for(int i=0;i<=n;i++)
+        int n=h.length;
+        Stack<Integer> st=new Stack<Integer>();
+        int maxArea=0;
+        int left[]=new int[n];
+        for(int i=0;i<n;i++)
         {
-            int currHeigth=(i==n?0:h[i]);//finding the curr heigth
-            while(!stack.isEmpty()&&currHeigth<h[stack.peek()])//checking if curr heigth is less that prev
+            
+            while(!st.isEmpty()&&h[st.peek()]>=h[i])
             {
-                int top=stack.pop();//removing prev heigth
-                int width=stack.isEmpty()?i:i-stack.peek()-1;//finding width(no of bars)
-                int area=width*h[top];//fidning area;
-                MaxArea=Math.max(MaxArea,area);//finding max;
+                st.pop();
             }
-            stack.push(i);//adding the index;
+            left[i]=st.isEmpty()?0:st.peek()+1;
+            st.push(i);
+            
         }
-        return MaxArea;
+        System.out.println(Arrays.toString(left));
+        int right[]=new int[n];
+        st.clear();
+        for(int i=n-1;i>=0;i--)
+        {
+            while(!st.isEmpty()&&h[st.peek()]>=h[i])
+            {
+                st.pop();
+            }
+            right[i]=st.isEmpty()?n-1:st.peek()-1;
+            st.push(i);
+            maxArea=Math.max(maxArea,(right[i]-left[i]+1)*h[i]);
+            
+        }
+         System.out.println(Arrays.toString(right));
+        
+        return maxArea;
+      
         
     }
 }

@@ -13,7 +13,7 @@ public class HeapPop {
         int L=2*i;
         int r=2*i+1;
         if(L>=l.size()||r>=l.size()) return ;
-           if(L<l.size()&&l.get(i)<l.get(L))lar=L;
+           if(L<l.size()&&l.get(L)>l.get(lar))lar=L;
            if(r<l.size()&&l.get(r)>l.get(lar))lar=r;
            if(lar!=i)
            {

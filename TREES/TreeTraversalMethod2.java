@@ -78,7 +78,7 @@ public class TreeTraversalMethode2 {
                      }
                      
                  }
-                 else//if not null go for right
+                 else//if not null go for right's left
                  {
                      curr=temp;//making curr as temp
                  }

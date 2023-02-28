@@ -57,7 +57,7 @@ public class TreeTraversalMethode2 {
          TreeNode curr=root;//making currnode as root
          while(!st.isEmpty()||curr!=null)
          {
-             if(curr!=null)//going for right if curr is not null
+             if(curr!=null)//going for left if curr is not null
              {
                  st.push(curr);
                  curr=curr.left;

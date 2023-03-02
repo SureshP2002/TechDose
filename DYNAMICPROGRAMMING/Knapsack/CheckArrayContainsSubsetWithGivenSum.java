@@ -11,7 +11,7 @@ public class Solution {
                 if(j==0)dp[i][j]=true;
                 else if(i==0&&j>0)dp[i][j]=false;
                 else if(A[i-1]>j)dp[i][j]=dp[i-1][j];
-                else dp[i][j]=dp[i-1][j]||dp[i-1][j-A[i-1]];
+                else dp[i][j]=dp[i-1][j]|dp[i-1][j-A[i-1]];
             }
         }
         for(int i=1;i<=n;i++)

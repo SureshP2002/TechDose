@@ -22,7 +22,7 @@ public class NumberOfSubsetsWithGivenDifference {
             System.out.print("0");
             System.exit(0);
         }
-        int target=(sum-diff)/2;
+        int target=(sum+diff)/2;
         int dp[][]=new int[n+1][target+1];
         for(int i=0;i<=n;i++)
         {

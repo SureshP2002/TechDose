@@ -23,7 +23,7 @@ public class TopologicalSortUsingBfs {
               
           }
           
-          if(ans.size()==V)//if ans list size is not equal to V then the given graph is acyclic
+          if(ans.size()==V)//if ans list size is  equal to V then the given graph is acyclic
           {
               System.out.println(ans);//printing list
           }

@@ -32,35 +32,24 @@ public class PatternSearchUsingKmp {
         }
         return ans;
     }
-    static int[] filllps(String pat,int []lps)
-    {
-        int m=pat.length();
-        int len=0;
-        lps[0]=0;
-        int i=1;
-        while(i<m)
-        {
-            if(pat.charAt(i)==pat.charAt(len))//if both char same in pattern string
-            {
+    public static int[] filllps(String pattern,int lps[]) {
+        int m = pattern.length();
+        int len = 0; // Length of the previous longest prefix suffix
+
+        for (int i = 1; i < m; i++) {
+            if (pattern.charAt(i) == pattern.charAt(len)) {
                 len++;
-                lps[i]=len;//add count
-                i++;
-            }
-            else//if not
-            {
-                if(len==0)//len is 0 
-                {
-                    lps[i]=0;
-                    i++;
-                }
-                else
-                {
-                    len=lps[len-1];
+                lps[i] = len;
+            } else {
+                if (len != 0) {
+                    len = lps[len - 1];
+                    i--;
+                } else {
+                    lps[i] = 0;
                 }
             }
         }
         return lps;
-    
     }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
